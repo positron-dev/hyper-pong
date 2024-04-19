@@ -8,11 +8,13 @@ namespace hyp {
 	class ElementBuffer {
 	public:
 		ElementBuffer(uint32_t* indices, uint32_t count);
+		~ElementBuffer();
 
 		void bind();
 		void unbind();
 
 		uint32_t getCount() const { return m_count; }
+
 	private:
 		uint32_t m_rendererId;
 		uint32_t m_count;
